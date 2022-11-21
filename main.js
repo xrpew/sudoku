@@ -3,6 +3,13 @@ var tileSelected = null;
 let board = null;
 var errors = 0;
 
+const loading = document.getElementById('loading')
+const newGame = document.getElementById('newGame')
+const invictus = document.getElementById('errors')
+
+invictus.style.display='none'
+newGame.style.display='none'
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -15,6 +22,9 @@ fetch('https://mega-sudoku-generator.p.rapidapi.com/standard', options)
 	.then(res => res.json())
     .then((data) => {
         setGame(data)
+        loading.style.display='none'
+        invictus.style.display='block'
+        newGame.style.display='block'
     } )
 	.catch(err => console.error(err));
 

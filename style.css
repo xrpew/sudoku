@@ -21,6 +21,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
 }
+
 .tile{
     width: 9vw;
     max-width: 48px;
@@ -34,10 +35,7 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
-
 
 #digits{
     width: 90vw;
@@ -49,8 +47,6 @@ hr{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-
-    
 }
 
 .number{
@@ -59,10 +55,6 @@ hr{
     max-height: 44px;
     height: 8vw;
     border: 1px solid black;
-
-    
-    /* max-width: 48px; */
-    /* max-height: 48px; */
     
     /* text */
     font-size: 20px ;
@@ -74,10 +66,11 @@ hr{
 }
 
 .number-selected{
-    background-color: gray;
+    background-color: rgb(255, 174, 144);
+    color: rgb(253, 253, 253);
 }
 .tile-start{
-    background-color: whitesmoke;
+    background-color:rgba(255, 127, 80, 0.134);
 }
 .horizontal-line{
     border-bottom: 1px solid black;
@@ -88,4 +81,74 @@ hr{
 }
 #newGame{
     margin-top: 5vw;
+    border: none;
+    width: 90vw;
+    align-self: center;
+    max-width: 300px;
+    height: 30px;
+    background-color: coral;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px rgba(255, 127, 80, 0.539);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
+body{
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-evenly ;
+    height: 100vh;
+    margin: 0px;
+}
+#loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    margin-top: 30%;
+    }
+#loading:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid rgb(222, 58, 58);
+    border-color:coral transparent #fff transparent;
+    animation: loading 1.2s infinite;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+    }
+
+    /* #errors {
+        animation: slidein .5s infinite;
+
+      }
+      
+      @keyframes slidein {
+        from {
+            transform: translateY(1px);
+        }
+      
+        to {
+            transform: translateY(0px);
+
+        }
+      } */
