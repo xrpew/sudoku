@@ -2,13 +2,16 @@ var numSelected = null;
 var tileSelected = null;
 let board = null;
 var errors = 0;
-
+var tryes = 81
 const loading = document.getElementById('loading')
 const newGame = document.getElementById('newGame')
 const invictus = document.getElementById('errors')
+const endScreen = document.getElementById('endScreen')
+const errorNumber = document.getElementById('errorNumber')
 
-invictus.style.display='none'
 newGame.style.display='none'
+invictus.style.display='none'
+endScreen.style.display='none'
 
 const options = {
 	method: 'GET',
@@ -49,7 +52,7 @@ document.getElementById('newGame').addEventListener('click',()=>location.reload(
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             if(board[r][c] != 0){
-
+                tryes--
                 tile.innerText = board[r][c]
                 tile.classList.add('tile-start')
             }
@@ -78,6 +81,7 @@ function selectNumber(){
 }
 
 function selectTile(){
+     
     if(numSelected){
         if(this.innerText != ''){
             return
@@ -88,10 +92,15 @@ function selectTile(){
 
         if(solution[r][c] == numSelected.id){
             this.innerText = numSelected.id
+            tryes--
+            if(tryes==0){
+                endScreen.style.display='flex'
+                errorNumber.innerText= 'solon con: ' + errors + ' errores'
+            }
         }
         else{
             errors +=1;
-            document.getElementById("errors").innerText = 'Errores: ' + errors
+            invictus.innerText = 'Errores: ' + errors
         }
     }
 }

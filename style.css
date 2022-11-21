@@ -79,7 +79,7 @@ hr{
     border-right: 1px solid black;
 
 }
-#newGame{
+button{
     margin-top: 5vw;
     border: none;
     width: 90vw;
@@ -137,18 +137,16 @@ body{
     }
     }
 
-    /* #errors {
-        animation: slidein .5s infinite;
-
-      }
-      
-      @keyframes slidein {
-        from {
-            transform: translateY(1px);
-        }
-      
-        to {
-            transform: translateY(0px);
-
-        }
-      } */
+    #endScreen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 228, 196, 0.923);
+        z-index: 10000;
+        position: fixed;
+    }
+    #endScreen p{
+        font-size: 20px;
+    }
