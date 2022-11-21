@@ -1,0 +1,91 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+hr{
+    width: 90vw;
+    max-width: 500px;
+}
+
+#errors{
+    color: coral;
+}
+
+#board{
+    width: 90vw;
+    max-width: 450px;
+    height: 90vw;
+    max-height: 450px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile{
+    width: 9vw;
+    max-width: 48px;
+    height: 9vw;
+    max-height: 48px;
+    border: 1px solid rgb(186, 200, 205);
+
+    /* text */
+    font-size: 20px ;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+#digits{
+    width: 90vw;
+    max-width: 450px;
+    height: 10vw;
+    max-height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    
+}
+
+.number{
+    width: 8vw;
+    max-width: 44px;
+    max-height: 44px;
+    height: 8vw;
+    border: 1px solid black;
+
+    
+    /* max-width: 48px; */
+    /* max-height: 48px; */
+    
+    /* text */
+    font-size: 20px ;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.number-selected{
+    background-color: gray;
+}
+.tile-start{
+    background-color: whitesmoke;
+}
+.horizontal-line{
+    border-bottom: 1px solid black;
+}
+.vertical-line{
+    border-right: 1px solid black;
+
+}
+#newGame{
+    margin-top: 5vw;
+}
